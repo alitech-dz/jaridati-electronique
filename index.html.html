@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0f766e">
+<title>جريدتي الإلكترونية</title>
+<style>
+:root{--ink:#14213d;--muted:#667085;--brand:#0f766e;--brand2:#115e59;--paper:#f4f7f8;--card:#fff;--line:#e5eaf0}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Tahoma,Arial,sans-serif;line-height:1.7}
+header{background:linear-gradient(120deg,#102a43,#0f766e);color:white;padding:24px 16px 20px}
+.wrap{max-width:1050px;margin:auto;padding:0 16px}.top{display:flex;align-items:center;gap:14px}.logo{font-size:38px}.brand h1{font-size:clamp(24px,5vw,36px);margin:0}.brand p{margin:2px 0 0;color:#d7f5ef}
+nav{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}nav a{color:#fff;text-decoration:none;border:1px solid #ffffff55;border-radius:999px;padding:7px 13px;font-size:14px}nav a:hover{background:#ffffff20}
+main{padding:24px 0 40px}.intro{background:white;border:1px solid var(--line);border-radius:18px;padding:20px;margin-bottom:18px}.intro h2{margin:0 0 5px;font-size:22px}.intro p{margin:0;color:var(--muted)}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}.toolbar input{flex:1;min-width:200px;padding:13px 15px;border:1px solid #d6dde5;border-radius:12px;font:inherit;background:white}.filters{display:flex;gap:8px;flex-wrap:wrap}.filters button{border:1px solid #d6dde5;background:white;border-radius:999px;padding:9px 13px;font:inherit;cursor:pointer}.filters button.active,.filters button:hover{background:var(--brand);color:white;border-color:var(--brand)}
+.section-title{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:24px 0 12px}.section-title h2{margin:0;font-size:21px}.section-title span{font-size:13px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;flex-direction:column;min-height:190px;box-shadow:0 4px 14px #0b25400a}.tag{display:inline-block;align-self:flex-start;background:#e1f5f1;color:#0f766e;border-radius:999px;padding:3px 9px;font-size:12px;font-weight:bold}.card h3{font-size:19px;margin:12px 0 6px}.card p{margin:0 0 14px;color:var(--muted);font-size:14px;flex:1}.card a{display:inline-flex;align-items:center;justify-content:center;background:var(--brand);color:white;text-decoration:none;padding:10px 12px;border-radius:10px;font-weight:bold}.card a:hover{background:var(--brand2)}
+.note{margin-top:18px;background:#fff8e7;border:1px solid #f4dfaa;color:#795b14;padding:13px 15px;border-radius:12px;font-size:13px}.empty{display:none;padding:24px;text-align:center;color:var(--muted);background:white;border-radius:14px}
+footer{border-top:1px solid var(--line);padding:22px 16px;text-align:center;color:var(--muted);font-size:13px}footer strong{color:var(--ink)}
+@media(max-width:560px){header{padding-top:18px}.logo{font-size:30px}.intro{padding:16px}.section-title{align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap">
+  <div class="top"><div class="logo">📰</div><div class="brand"><h1>جريدتي الإلكترونية</h1><p>مصادر الأخبار والمعلومات في مكان واحد</p></div></div>
+  <nav aria-label="التنقل"><a href="#sources">مصادر الأخبار</a><a href="#categories">حسب المجال</a><a href="#about">حول الجريدة</a></nav>
+ </div>
+</header>
+<main class="wrap">
+ <section class="intro">
+  <h2>تابع الأخبار من مصادرها الأصلية</h2>
+  <p>واجهة تجمع روابط مصادر الأخبار والمعلومات. اضغط على أي مصدر لقراءة آخر ما ينشره في موقعه الرسمي.</p>
+ </section>
+ <div class="filters" id="categories">
+  <button class="active" data-cat="الكل">الكل</button><button data-cat="أخبار وطنية">أخبار وطنية</button><button data-cat="دولي">دولي</button><button data-cat="اقتصاد">اقتصاد</button><button data-cat="رياضة">رياضة</button><button data-cat="ثقافة">ثقافة</button><button data-cat="معلومات رسمية">معلومات رسمية</button>
+ </div>
+ <div class="section-title" id="sources"><h2>مصادر المعلومات</h2><span>روابط مباشرة إلى المواقع الأصلية</span></div>
+ <div class="grid" id="grid">
+  <article class="card" data-cat="أخبار وطنية اقتصاد رياضة ثقافة دولي"><span class="tag">وكالة أنباء</span><h3>وكالة الأنباء الجزائرية — APS</h3><p>أخبار الجزائر، الأخبار الدولية، الاقتصاد، الثقافة والرياضة.</p><a href="https://www.aps.dz/" target="_blank" rel="noopener">زيارة المصدر ↗</a></article>
+  <article class="card" data-cat="أخبار وطنية دولي رياضة ثقافة"><span class="tag">تلفزيون وأخبار</span><h3>التلفزيون الجزائري</h3><p>الأخبار الوطنية، أخبار الولايات، نشرات الأخبار والبرامج.</p><a href="https://news.entv.dz/ar" target="_blank" rel="noopener">زيارة المصدر ↗</a></article>
+  <article class="card" data-cat="معلومات رسمية أخبار وطنية"><span class="tag">مؤسسة رسمية</span><h3>رئاسة الجمهورية</h3><p>البيانات والأخبار والمنشورات الرسمية لرئاسة الجمهورية.</p><a href="https://www.el-mouradia.dz/" target="_blank" rel="noopener">زيارة المصدر ↗</a></article>
+  <article class="card" data-cat="معلومات رسمية أخبار وطنية"><span class="tag">مؤسسة رسمية</span><h3>وزارة الاتصال</h3><p>معلومات وإعلانات متعلقة بقطاع الاتصال والإعلام.</p><a href="https://www.ministerecommunication.gov.dz/" target="_blank" rel="noopener">زيارة المصدر ↗</a></article>
+  <article class="card" data-cat="معلومات رسمية اقتصاد"><span class="tag">إحصائيات</span><h3>الديوان الوطني للإحصائيات</h3><p>بيانات ومؤشرات إحصائية عن الجزائر.</p><a href="https://www.ons.dz/" target="_blank" rel="noopener">زيارة المصدر ↗</a></article>
+  <article class="card" data-cat="معلومات رسمية أخبار وطنية"><span class="tag">الجريدة الرسمية</span><h3>الجريدة الرسمية الجزائرية</h3><p>النصوص القانونية والتنظيمية المنشورة رسمياً.</p><a href="https://www.joradp.dz/" target="_blank" rel="noopener">زيارة المصدر ↗</a></article>
+
+  <article class="card" data-cat="أخبار وطنية اقتصاد رياضة ثقافة دولي"><span class="tag">جريدة إلكترونية</span><h3>الشروق أونلاين</h3><p>أخبار الجزائر والعالم، المجتمع، الاقتصاد والرياضة.</p><a href="https://www.echoroukonline.com/" target="_blank" rel="noopener">زيارة الشروق ↗</a></article>
+  <article class="card" data-cat="أخبار وطنية اقتصاد رياضة ثقافة دولي"><span class="tag">جريدة إلكترونية</span><h3>الخبر</h3><p>أخبار الوطن والعالم، الاقتصاد، الثقافة والرياضة.</p><a href="https://www.elkhabar.com/" target="_blank" rel="noopener">زيارة الخبر ↗</a></article>
+  <article class="card" data-cat="أخبار وطنية اقتصاد رياضة ثقافة دولي"><span class="tag">جريدة إلكترونية</span><h3>النهار أونلاين</h3><p>الأخبار الجزائرية، المجتمع، السياسة والرياضة.</p><a href="https://www.ennaharonline.com/" target="_blank" rel="noopener">زيارة النهار ↗</a></article>
+  <article class="card" data-cat="أخبار وطنية اقتصاد رياضة ثقافة دولي"><span class="tag">جريدة إلكترونية</span><h3>البلاد</h3><p>أخبار الجزائر والعالم ومختلف المجالات.</p><a href="https://www.elbilad.net/" target="_blank" rel="noopener">زيارة البلاد ↗</a></article>
+  <article class="card" data-cat="أخبار وطنية اقتصاد رياضة ثقافة دولي"><span class="tag">موقع إخباري بالفرنسية</span><h3>TSA Algérie</h3><p>أخبار وتحليلات حول الجزائر باللغة الفرنسية.</p><a href="https://www.tsa-algerie.com/" target="_blank" rel="noopener">زيارة TSA ↗</a></article>
+  <article class="card" data-cat="أخبار وطنية اقتصاد رياضة ثقافة دولي"><span class="tag">جريدة بالفرنسية</span><h3>El Watan</h3><p>صحافة وأخبار جزائرية باللغة الفرنسية.</p><a href="https://elwatan-dz.com/" target="_blank" rel="noopener">زيارة El Watan ↗</a></article>
+  <article class="card" data-cat="أخبار وطنية اقتصاد رياضة ثقافة دولي"><span class="tag">جريدة بالفرنسية</span><h3>Le Quotidien d'Oran</h3><p>أخبار وتقارير ومقالات باللغة الفرنسية.</p><a href="https://www.lequotidien-oran.dz/" target="_blank" rel="noopener">زيارة الجريدة ↗</a></article>
+  <article class="card" data-cat="أخبار وطنية اقتصاد رياضة ثقافة دولي"><span class="tag">جريدة رسمية بالفرنسية</span><h3>El Moudjahid</h3><p>أخبار وطنية ودولية ومعلومات عامة.</p><a href="https://www.elmoudjahid.dz/" target="_blank" rel="noopener">زيارة El Moudjahid ↗</a></article>
+  <article class="card" data-cat="أخبار وطنية اقتصاد رياضة ثقافة دولي"><span class="tag">أخبار رقمية</span><h3>Algérie360</h3><p>أخبار الجزائر، المجتمع، الاقتصاد والرياضة.</p><a href="https://www.algerie360.com/" target="_blank" rel="noopener">زيارة Algérie360 ↗</a></article>
+  <article class="card" data-cat="رياضة أخبار وطنية دولي"><span class="tag">جريدة رياضية</span><h3>Compétition</h3><p>أخبار الرياضة وكرة القدم الجزائرية.</p><a href="https://www.competition.dz/" target="_blank" rel="noopener">زيارة Compétition ↗</a></article>
+ </div>
+ <div class="empty" id="empty">ما لقيناش مصدر يطابق البحث.</div>
+ <div class="note">ملاحظة: هذه النسخة تجمع روابط المصادر فقط، ولا تنسخ مقالاتها أو تعرض الأخبار تلقائياً. محتوى الأخبار والتحديثات يبقى على المواقع الأصلية.</div>
+ <section class="intro" id="about" style="margin-top:22px"><h2>حول جريدتي الإلكترونية</h2><p>منصة بسيطة للوصول إلى مصادر الأخبار والمعلومات. يتم فتح كل مصدر في موقعه الأصلي، مع إمكانية إضافة مصادر أخرى لاحقاً.</p></section>
+</main>
+<footer><strong>جريدتي الإلكترونية</strong><br>صُمّم وطُوّر من طرف <strong>بن عيفة علي</strong><br>منصة روابط لمصادر المعلومات — © 2026</footer>
+<script>
+const cards=[...document.querySelectorAll('.card')], buttons=[...document.querySelectorAll('.filters button')], empty=document.getElementById('empty');let category='الكل';
+function filter(){let n=0;cards.forEach(c=>{const okCat=category==='الكل'||c.dataset.cat.split(' ').includes(category);c.style.display=okCat?'flex':'none';if(okCat)n++});empty.style.display=n?'none':'block'}
+buttons.forEach(b=>b.addEventListener('click',()=>{category=b.dataset.cat;buttons.forEach(x=>x.classList.toggle('active',x===b));filter()}));
+</script>
+</body>
+</html>
