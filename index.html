@@ -64,6 +64,11 @@ footer{border-top:1px solid var(--line);padding:22px 16px;text-align:center;colo
 const cards=[...document.querySelectorAll('.card')], buttons=[...document.querySelectorAll('.filters button')], empty=document.getElementById('empty');let category='الكل';
 function filter(){let n=0;cards.forEach(c=>{const okCat=category==='الكل'||c.dataset.cat.split(' ').includes(category);c.style.display=okCat?'flex':'none';if(okCat)n++});empty.style.display=n?'none':'block'}
 buttons.forEach(b=>b.addEventListener('click',()=>{category=b.dataset.cat;buttons.forEach(x=>x.classList.toggle('active',x===b));filter()}));
+ document.querySelectorAll('.card a').forEach(a=>{
+  a.removeAttribute('target');
+});
+Rédiger
+
 </script>
 </body>
 </html>
